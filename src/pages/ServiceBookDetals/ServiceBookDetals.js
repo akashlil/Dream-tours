@@ -30,13 +30,16 @@ const ServiceBookDetals = () => {
     if (userOldBookList) {
       alert("This Booking Serviceyou are allready add");
     } else {
-      fetch(`http://localhost:5000/booktours`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
+      fetch(
+        `https://salty-cove-54306.herokuapp.com/showallservices/booktours`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           reset();
