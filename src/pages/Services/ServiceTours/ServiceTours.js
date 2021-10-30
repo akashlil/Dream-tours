@@ -1,9 +1,16 @@
 import React from "react";
+import { useHistory } from "react-router";
 import "./ServiceTours.css";
 
 const ServiceTours = ({ services }) => {
+  const historys = useHistory();
+
+  const bookingHandler = () => {
+    historys.push(`/bookservice/${services?._id}/${services?.servicetitle}`);
+  };
+
   return (
-    <div className="col">
+    <div className="cols">
       <div className="card h-100 shadow-sm position-relative">
         <div className="position-absolute top-0 start-50 translate-middle-x">
           <b type="button" class="btn btn-success position-relative">
@@ -29,13 +36,18 @@ const ServiceTours = ({ services }) => {
           <h5 className="card-title fw-bold service-title-hover">
             {services?.servicetitle.slice(0, 35)}
           </h5>
-          <p className="card-text">
-            {services?.servicedescription.slice(0, 200)}
+          <p className="card-text ">
+            {services?.servicedescription.slice(0, 150)}
           </p>
         </div>
         <div className="card-footer d-flex justify-content-between align-items-center">
           <small className="text-muted">{services?.tourday}</small>
-          <button className="btn btn-outline-success btn-sm ">Book Now</button>
+          <button
+            className="btn btn-outline-success btn-sm "
+            onClick={bookingHandler}
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>

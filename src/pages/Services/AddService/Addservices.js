@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import OrderManage from "../OrderManage/OrderManage";
 import ServiceAddw from "./Service/ServiceAddw";
-
+import "./Addservices.css";
 const Addservices = () => {
   function Child({ name }) {
     return (
@@ -20,7 +20,7 @@ const Addservices = () => {
   }
 
   return (
-    <div className="section-gap">
+    <div className="add-service-section-gap">
       <div className="row">
         <div className="col-md-3 ">
           <div className="mx-3 side-bar rounded-3 shadow-lg ">

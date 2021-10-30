@@ -1,6 +1,10 @@
 import React from "react";
+import useDatabase from "../../../hooks/useDatabase";
 
 const OrderManage = () => {
+  const { booktourslist, deletebooktoursrlist } = useDatabase();
+  let i = 1;
+
   return (
     <div className=" table-responsive">
       <table className="table  table-borderless   caption-top">
@@ -10,31 +14,30 @@ const OrderManage = () => {
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Email id</th>
-            <th scope="col">Volunteer List</th>
+            <th scope="col">Booktours List</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
-          {/* {volunteerList.map((voluntee) => {
-              console.log(voluntee._id);
-              return (
-                <tr>
-                  <th scope="row">{i++}</th>
-                  <td>{voluntee.fullname}</td>
-                  <td>{voluntee.email}</td>
-                  <td>{voluntee.organizebooksname}</td>
-  
-                  <td>
-                    <button
-                      onClick={() => deletevolunteerlist(voluntee?._id)}
-                      className="btn btn-sm btn-danger"
-                    >
-                      <i className="fas fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
-              );
-            })} */}
+          {booktourslist?.map((booktours) => {
+            return (
+              <tr>
+                <th scope="row">{i++}</th>
+                <td>{booktours?.name}</td>
+                <td>{booktours?.email}</td>
+                <td>{booktours?.bookservicetitle}</td>
+
+                <td>
+                  <button
+                    onClick={() => deletebooktoursrlist(booktours._id)}
+                    className="btn btn-sm btn-danger"
+                  >
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

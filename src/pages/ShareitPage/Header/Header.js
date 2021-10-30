@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../../context/useAuth";
 import "./Header.css";
 const Header = () => {
   const logo = `https://i.ibb.co/Zg5Z5fT/dream.png`;
+
+  const { user, logOut } = useAuth();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -38,16 +42,22 @@ const Header = () => {
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/myoder">
-                <button className="btn btn-sm btn-success">Login</button>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <p className="nav-link m-0">
-                <button className="btn btn-sm btn-danger">LogOut</button>
-              </p>
-            </li>
+            {user.email ? (
+              <li className="nav-item">
+                <p className="nav-link m-0">
+                  <span className="fw-bolder mx-2"> {user.displayName} </span>
+                  <button onClick={logOut} className="btn btn-sm btn-danger">
+                    LogOut
+                  </button>
+                </p>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  <button className="btn btn-sm btn-success">Login</button>
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>

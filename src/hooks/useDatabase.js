@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const useDatabase = () => {
   const [servicesAll, setServicesAll] = useState([]);
+  const [booktourslist, setBooktourslist] = useState([]);
   const [dataLoadTime, setDataLoadTime] = useState(true);
 
   useEffect(() => {
@@ -9,14 +10,45 @@ const useDatabase = () => {
       .then((res) => res.json())
       .then((data) => {
         setServicesAll(data);
+      })
+      .finally(() => {
         setDataLoadTime(false);
       });
   }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/booktourslist`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBooktourslist(data);
+      })
+      .finally(() => {
+        setDataLoadTime(false);
+      });
+  }, []);
+
+  // admin and user service delete
+  const deletebooktoursrlist = (id) => {
+    console.log(id);
+    fetch(`http://localhost:5000/delettable/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const updateTable = booktourslist.filter(
+          (booktours) => booktours._id !== id
+        );
+        setBooktourslist(updateTable);
+      });
+  };
 
   return {
     servicesAll,
     setServicesAll,
     dataLoadTime,
+    booktourslist,
+    setBooktourslist,
+    deletebooktoursrlist,
   };
 };
 

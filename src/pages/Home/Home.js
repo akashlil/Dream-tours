@@ -7,7 +7,7 @@ import "./Home.css";
 
 const Home = () => {
   const { servicesAll, dataLoadTime } = useDatabase();
-  console.log(servicesAll);
+
   return (
     <div className="">
       <div className="bg-banner">
@@ -146,7 +146,10 @@ const Home = () => {
                 </div>
               ) : (
                 servicesAll.map((services) => (
-                  <ServiceTours services={services}></ServiceTours>
+                  <ServiceTours
+                    key={services._id}
+                    services={services}
+                  ></ServiceTours>
                 ))
               )}
             </div>
