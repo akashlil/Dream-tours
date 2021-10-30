@@ -17,9 +17,7 @@ const useDatabase = () => {
   }, []);
 
   useEffect(() => {
-    fetch(
-      `https://salty-cove-54306.herokuapp.com/showallservices/booktourslist`
-    )
+    fetch(`https://salty-cove-54306.herokuapp.com/booktourslist`)
       .then((res) => res.json())
       .then((data) => {
         setBooktourslist(data);
@@ -32,12 +30,9 @@ const useDatabase = () => {
   // admin and user service delete
   const deletebooktoursrlist = (id) => {
     console.log(id);
-    fetch(
-      `https://salty-cove-54306.herokuapp.com/showallservices/delettable/${id}`,
-      {
-        method: "DELETE",
-      }
-    )
+    fetch(`https://salty-cove-54306.herokuapp.com/delettable/${id}`, {
+      method: "DELETE",
+    })
       .then((res) => res.json())
       .then((data) => {
         const updateTable = booktourslist.filter(
