@@ -30,6 +30,12 @@ const MyOrder = () => {
                   >
                     <p className="m-0">{items.bookservicetitle}</p>
                   </Link>
+                  {items.status === "update" ? (
+                    <span class="badge bg-success">{items.status}</span>
+                  ) : (
+                    <span class="badge bg-primary">{items.status}</span>
+                  )}
+                  <p className></p>
                 </div>
                 <div>
                   <button
