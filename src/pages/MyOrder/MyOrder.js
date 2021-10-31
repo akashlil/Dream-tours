@@ -15,12 +15,12 @@ const MyOrder = () => {
   return (
     <div className="row row-cols-md-3 row-cols-1 myorder-section-gap">
       {dataLoadTime ? (
-        <div class="spinner-border text-success mx-auto" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-border text-success mx-auto" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
         userbooktourslist.map((items) => (
-          <div className="col">
+          <div className="col" key={items._id}>
             <div className="shadow py-3 m-4 bg-body rounded" key={items._id}>
               <div className="d-flex justify-content-between align-items-center  px-4">
                 <div>
@@ -31,9 +31,9 @@ const MyOrder = () => {
                     <p className="m-0">{items.bookservicetitle}</p>
                   </Link>
                   {items.status === "update" ? (
-                    <span class="badge bg-success">{items.status}</span>
+                    <span className="badge bg-success">{items.status}</span>
                   ) : (
-                    <span class="badge bg-primary">{items.status}</span>
+                    <span className="badge bg-primary">{items.status}</span>
                   )}
                   <p className></p>
                 </div>

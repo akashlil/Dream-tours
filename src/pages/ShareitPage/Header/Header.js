@@ -8,10 +8,7 @@ const Header = () => {
   const { user, logOut } = useAuth();
 
   return (
-    <nav
-      className="navbar navbar-expand-lg navbar-light sticky-top py-3"
-      style={{ "background-color": "#198754" }}
-    >
+    <nav className="navbar navbar-expand-lg navbar-light sticky-top py-3  bg-success">
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="" />
@@ -28,9 +25,9 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          <ul className="navbar-nav text-uppercase  ms-auto mb-2 mb-lg-0 middle-part ">
             <li className="nav-item">
-              <Link className="nav-link nav-text-color" to="/home">
+              <Link className="nav-link nav-text-color active" to="/home">
                 Home
               </Link>
             </li>
@@ -59,7 +56,7 @@ const Header = () => {
                 <p className="nav-link m-0">
                   <span className="fw-bolder mx-2"> {user.displayName} </span>
                   <button onClick={logOut} className="btn btn-sm btn-danger">
-                    <i class="fas fa-sign-out-alt ms-2"></i>
+                    <i className="fas fa-sign-out-alt ms-2"></i>
                   </button>
                 </p>
               </li>
@@ -67,7 +64,7 @@ const Header = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="/login">
                   <button className="btn btn-sm btn-success">
-                    <i class="fas fa-sign-in-alt ms-2"></i>
+                    <i className="fas fa-sign-in-alt ms-2"></i>
                   </button>
                 </Link>
               </li>

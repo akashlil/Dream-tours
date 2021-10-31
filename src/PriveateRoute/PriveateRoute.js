@@ -6,9 +6,9 @@ const PriveateRoute = ({ children, ...rest }) => {
   const { user, loadData } = useAuth();
   if (loadData) {
     return (
-      <div className="row">
-        <div class="spinner-border text-success mx-auto" role="status">
-          <span class="visually-hidden">Loading...</span>
+      <div className="row mt-5">
+        <div className="spinner-border text-success mx-auto" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       </div>
     );

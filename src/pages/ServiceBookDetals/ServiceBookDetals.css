@@ -37,6 +37,9 @@
   .banner-s-s {
     min-height: 40vh;
   }
+  .ser-book-gap-d {
+    min-height: 0px;
+  }
 }
 
 .section-my-6 {
@@ -44,5 +47,5 @@
 }
 
 .ser-book-gap-d {
-  min-height: 41vh;
+  min-height: 247px;
 }

@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router";
 
 const useDatabase = () => {
-  const history = useHistory();
   const [servicesAll, setServicesAll] = useState([]);
   const [booktourslist, setBooktourslist] = useState([]);
   const [dataLoadTime, setDataLoadTime] = useState(true);
-
+  const [getDatacallagin, setgetDatacallagin] = useState(false);
   useEffect(() => {
     fetch(`https://salty-cove-54306.herokuapp.com/showallservices`)
       .then((res) => res.json())
@@ -27,7 +25,7 @@ const useDatabase = () => {
       .finally(() => {
         setDataLoadTime(false);
       });
-  }, []);
+  }, [getDatacallagin]);
 
   // admin and user service delete
   const deletebooktoursrlist = (id) => {
@@ -47,6 +45,7 @@ const useDatabase = () => {
   };
 
   const udatebooktoursrlist = (id) => {
+    setgetDatacallagin(false);
     const updateStatus = { status: "update" };
     fetch(`https://salty-cove-54306.herokuapp.com/statusupdate/${id}`, {
       method: "PUT",
@@ -57,9 +56,8 @@ const useDatabase = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
-          history.push("/addservices/?name=servicesregisterlist");
+          setgetDatacallagin(true);
         }
       });
   };

@@ -13,13 +13,13 @@ const ServiceTours = ({ services }) => {
     <div className="cols">
       <div className="card h-100 shadow-sm position-relative">
         <div className="position-absolute top-0 start-50 translate-middle-x">
-          <b type="button" class="btn btn-success position-relative">
+          <b type="button" className="btn btn-success position-relative">
             BDT {services.price} TK
             <svg
               width="1em"
               height="1em"
               viewBox="0 0 16 16"
-              class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
+              className="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
               fill="#212529"
               xmlns="http://www.w3.org/2000/svg"
             >

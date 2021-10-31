@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
-      <div className="py-5 mt-5 " style={{ "background-color": "#edf2f7" }}>
+      <div className="py-5 mt-5 bg-dark text-light">
         <div className="container">
           <div className="row row-cols-md-4 row-cols-1">
             <div className="cols">

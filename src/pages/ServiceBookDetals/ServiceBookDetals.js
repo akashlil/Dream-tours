@@ -50,9 +50,9 @@ const ServiceBookDetals = () => {
   return (
     <div className="ser-book-gap-d">
       {dataLoadTime ? (
-        <div className="row">
-          <div class="spinner-border text-success mx-auto" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="row my-5">
+          <div className="spinner-border text-success mx-auto" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : (
@@ -107,7 +107,7 @@ const ServiceBookDetals = () => {
                     {" "}
                     <i
                       aria-hidden="true"
-                      class="far fa-hand-point-right text-success"
+                      className="far fa-hand-point-right text-success"
                     ></i>{" "}
                     Book This Tour
                   </h1>
@@ -130,7 +130,7 @@ const ServiceBookDetals = () => {
                         placeholder="Booking list"
                         aria-label=".form-control-lg example"
                         required
-                        class="form-control form-control-lg border-0"
+                        className="form-control form-control-lg border-0"
                       />
                       {errors.bookservicetitle && (
                         <span className="text-danger">
@@ -142,7 +142,7 @@ const ServiceBookDetals = () => {
                       <input
                         defaultValue={user.displayName}
                         {...register("name", { required: true })}
-                        class="form-control form-control-lg border-0"
+                        className="form-control form-control-lg border-0"
                         type="text"
                         placeholder="Name"
                         aria-label=".form-control-lg example"
@@ -157,7 +157,7 @@ const ServiceBookDetals = () => {
 
                       <input
                         defaultValue={user.email}
-                        class="form-control form-control-lg border-0"
+                        className="form-control form-control-lg border-0"
                         type="text"
                         placeholder="email"
                         aria-label=".form-control-lg example"
@@ -172,7 +172,7 @@ const ServiceBookDetals = () => {
                       <br />
                       <br />
                       <input
-                        class="form-control form-control-lg border-0 "
+                        className="form-control form-control-lg border-0 "
                         type="number"
                         placeholder="Phone"
                         aria-label=".form-control-lg example"
@@ -187,7 +187,7 @@ const ServiceBookDetals = () => {
                       <br />
                       <br />
                       <textarea
-                        class="form-control form-control-lg border-0"
+                        className="form-control form-control-lg border-0"
                         type="text"
                         placeholder="Pick-up Address"
                         aria-label=".form-control-lg example"

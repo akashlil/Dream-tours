@@ -137,8 +137,11 @@ const Home = () => {
           <div>
             <div className="row row-cols-1 row-cols-md-3 g-4">
               {dataLoadTime ? (
-                <div class="spinner-border text-success mx-auto" role="status">
-                  <span class="visually-hidden">Loading...</span>
+                <div
+                  className="spinner-border text-success mx-auto"
+                  role="status"
+                >
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               ) : (
                 servicesAll.map((services) => (
