@@ -34,7 +34,11 @@ const MyOrder = () => {
                 <div>
                   <button
                     className="btn btn-light"
-                    onClick={() => deletebooktoursrlist(items._id)}
+                    onClick={() =>
+                      window.confirm(
+                        "Are you sure ? this item has been detected "
+                      ) && deletebooktoursrlist(items._id)
+                    }
                   >
                     Cancel
                   </button>

@@ -31,7 +31,6 @@ const useDatabase = () => {
 
   // admin and user service delete
   const deletebooktoursrlist = (id) => {
-    console.log(id);
     fetch(`https://salty-cove-54306.herokuapp.com/delettable/${id}`, {
       method: "DELETE",
     })

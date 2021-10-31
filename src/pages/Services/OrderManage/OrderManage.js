@@ -51,7 +51,11 @@ const OrderManage = () => {
                     <i className="fas fa-pen-alt" aria-hidden="true"></i>
                   </button>
                   <button
-                    onClick={() => deletebooktoursrlist(booktours._id)}
+                    onClick={() =>
+                      window.confirm(
+                        "Are you sure ? this item has been detected "
+                      ) && deletebooktoursrlist(booktours._id)
+                    }
                     className="btn btn-sm btn-danger"
                   >
                     <i className="fas fa-trash"></i>
