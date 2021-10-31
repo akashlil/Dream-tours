@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Tourisn Company website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tour Booking website [Dream Tours](https://dream-tours-9bce1.web.app/).
 
-## Available Scripts
+### What Are The Benefits Of Choosing Amazing Tours?
 
-In the project directory, you can run:
+In the competitive world of tour operate companies Amazing Tours is becoming increasingly well-known, thanks in no small part to the pure selection and value that we’ve mentioned. And rather than search every tour operator on the Internet, an increasing number of people have realized that for the sake of convenience, there’s simply no beating the amazing tours.
 
-### `npm start`
+There’s no need to get bogged down in each and every tour operator’s website individually, because we can offer you Dhaka, Shundarban, Cox’s Bazar, St.Mertin, Teknaf, Rangamati, Khagrachori, Bandarbon, Chittagong, Sylhet and cruises all in one place, and from just about every holiday company you can think of. If you’d like to find out a little more about some of the tour operators and holiday companies featured on our company.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### website working
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. website working
+   1. loging system
+   2. logout system
+   3. book and oder service with user login
+   4. my booking list see user
+   5. my odermangent system
+   6. add a new service
+   7. update oder status user see
+   8. data store mongo bd
+   9. order managent system work admin ...
+      10 .admin page ...
 
-### `npm test`
+### website about
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dream tours is on of the leading touris companies in Bangladeshtha aims to provide the best possible touris company solution to all then guest and tourist in the country. we are dedicatesd to providing you with the best Bangladesh tour ay com.. you willl easily find the info and you nees for a pleasant visit and to get the most pleasant stay inbd.

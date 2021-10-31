@@ -20,10 +20,13 @@ const Home = () => {
       <div className="container">
         <div className="section-gap">
           <h1 className="fs-h1 fw-bolder  text-color-g">Our Destinations</h1>
-          <div className="row row-cols-lg-3 row-cols-1 g-4">
+          <div className="row row-cols-lg-2 row-cols-1 g-4">
             <div className="cols ">
               <ServiceBgImg></ServiceBgImg>
             </div>
+            <h2 className="fs-4 bottom-0">
+              Coming soon more Destinations option.....! Enjoy your life
+            </h2>
           </div>
         </div>
       </div>
