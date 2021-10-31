@@ -30,12 +30,12 @@ const ServiceAddw = () => {
 
   return (
     <div>
-      <p className="fw-bolder fs-4 ms-2">Add event</p>
+      <p className="fw-bolder fs-4 ms-2">Add New Service</p>
       <form onSubmit={handlServiceadd}>
         <div className="mb-3 row me-4">
           <div className="col-md-6">
             <label htmlFor="exampleInputEmail1" className="form-label">
-              Event Title
+              Booking Service Title
             </label>
             <input
               type="text"

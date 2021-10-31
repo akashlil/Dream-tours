@@ -2,8 +2,11 @@ import React from "react";
 import useDatabase from "../../../hooks/useDatabase";
 
 const OrderManage = () => {
-  const { booktourslist, deletebooktoursrlist } = useDatabase();
+  const { booktourslist, deletebooktoursrlist, udatebooktoursrlist } =
+    useDatabase();
   let i = 1;
+
+  // status update
 
   return (
     <div className=" table-responsive">
@@ -14,6 +17,7 @@ const OrderManage = () => {
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Email id</th>
+            <th scope="col">Booktours List</th>
             <th scope="col">Booktours List</th>
             <th scope="col">Action</th>
           </tr>
@@ -26,8 +30,26 @@ const OrderManage = () => {
                 <td>{booktours?.name}</td>
                 <td>{booktours?.email}</td>
                 <td>{booktours?.bookservicetitle}</td>
+                <td>
+                  {booktours?.status === "update" ? (
+                    <span class="badge rounded-pill bg-success">
+                      {booktours?.status}
+                    </span>
+                  ) : (
+                    <span class="badge rounded-pill bg-primary">
+                      {booktours?.status}
+                      {"..."}
+                    </span>
+                  )}
+                </td>
 
                 <td>
+                  <button
+                    onClick={() => udatebooktoursrlist(booktours._id)}
+                    className="btn btn-sm btn-success me-3"
+                  >
+                    <i className="fas fa-pen-alt" aria-hidden="true"></i>
+                  </button>
                   <button
                     onClick={() => deletebooktoursrlist(booktours._id)}
                     className="btn btn-sm btn-danger"

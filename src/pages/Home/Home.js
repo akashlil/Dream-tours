@@ -3,6 +3,7 @@ import useDatabase from "../../hooks/useDatabase";
 import ServiceBgImg from "../Services/ServiceBgImg/ServiceBgImg";
 import ServiceTours from "../Services/ServiceTours/ServiceTours";
 import Banner from "../ShareitPage/Banner/Banner";
+import Slider from "../ShareitPage/Slider/Slider";
 import "./Home.css";
 
 const Home = () => {
@@ -10,22 +11,17 @@ const Home = () => {
 
   return (
     <div className="">
+      <div>
+        <Slider></Slider>
+      </div>
       <div className="bg-banner">
         <Banner></Banner>
       </div>
       <div className="container">
         <div className="section-gap">
-          <h1 className="fs-h1 fw-bolder my-5 text-color-g">
-            Our Destinations
-          </h1>
+          <h1 className="fs-h1 fw-bolder  text-color-g">Our Destinations</h1>
           <div className="row row-cols-lg-3 row-cols-1 g-4">
             <div className="cols ">
-              <ServiceBgImg></ServiceBgImg>
-            </div>
-            <div className="cols">
-              <ServiceBgImg></ServiceBgImg>
-            </div>
-            <div className="cols">
               <ServiceBgImg></ServiceBgImg>
             </div>
           </div>

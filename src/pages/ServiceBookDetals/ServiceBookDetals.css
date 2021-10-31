@@ -1,13 +1,13 @@
 .banner-s-s {
   position: relative;
-  min-height: 70vh;
+  min-height: 80vh;
   z-index: 1;
   color: #ffffff;
 }
 .service-banner {
   position: absolute;
-  background-size: cover;
-  background-position: center;
+  background-size: auto;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: -1;
   height: 100%;
@@ -41,4 +41,8 @@
 
 .section-my-6 {
   margin: 100px 0;
+}
+
+.ser-book-gap-d {
+  min-height: 41vh;
 }
