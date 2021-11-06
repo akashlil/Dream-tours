@@ -6,3 +6,8 @@
 .nav-text-color:hover {
   color: rgb(245, 52, 52) !important;
 }
+@media only screen and (max-width: 600px) {
+  .nav-item:last-child {
+    order: -1;
+  }
+}

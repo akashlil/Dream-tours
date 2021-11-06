@@ -40,7 +40,7 @@ const Home = () => {
           <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col">
               <div className="card h-100 text-center border-0">
-                <div className="card-body">
+                <div className="card-body" data-aos="fade-up">
                   <h5 className="card-title text-uppercase text-success fw-bold fs-4">
                     month offter
                   </h5>
@@ -55,7 +55,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card h-100 text-center border-0">
-                <div className="card-body">
+                <div className="card-body" data-aos="fade-up">
                   <h5 className="card-title text-uppercase text-success fw-bold fs-4">
                     local company
                   </h5>
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card h-100 text-center border-0">
-                <div className="card-body">
+                <div className="card-body" data-aos="fade-up">
                   <h5 className="card-title text-uppercase text-success fw-bold fs-4">
                     Lower Price tours
                   </h5>
@@ -84,7 +84,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card h-100 text-center border-0">
-                <div className="card-body">
+                <div className="card-body" data-aos="fade-up">
                   <h5 className="card-title text-uppercase text-success fw-bold fs-4">
                     all time support tours
                   </h5>
@@ -99,7 +99,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card h-100 text-center border-0">
-                <div className="card-body">
+                <div className="card-body" data-aos="fade-up">
                   <h5 className="card-title text-uppercase text-success fw-bold fs-4">
                     Any country tours
                   </h5>
@@ -114,7 +114,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card h-100 text-center border-0">
-                <div className="card-body">
+                <div className="card-body" data-aos="fade-up">
                   <h5 className="card-title text-uppercase text-success fw-bold fs-4">
                     all time open some offer
                   </h5>

@@ -9,9 +9,18 @@ const ServiceTours = ({ services }) => {
     historys.push(`/bookservice/${services?._id}/${services?.servicetitle}`);
   };
 
+  /*   Animation add
+  data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" */
   return (
     <div className="cols">
-      <div className="card h-100 shadow-sm position-relative">
+      <div
+        className="card h-100 shadow-sm position-relative"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
         <div className="position-absolute top-0 start-50 translate-middle-x">
           <b type="button" className="btn btn-success position-relative">
             BDT {services.price} TK

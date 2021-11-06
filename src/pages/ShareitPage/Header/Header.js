@@ -25,7 +25,7 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav text-uppercase  ms-auto mb-2 mb-lg-0 middle-part ">
+          <ul className="navbar-nav text-uppercase d-flex align-items-center  ms-auto mb-2 mb-lg-0 middle-part ">
             <li className="nav-item">
               <Link className="nav-link nav-text-color active" to="/home">
                 Home
@@ -36,13 +36,11 @@ const Header = () => {
                 My Order
               </Link>
             </li>
-
             {/* <li className="nav-item">
                 <Link className="nav-link" to="/addservices">
                   Add service and register list
                 </Link>
               </li> */}
-
             {user.email && (
               <li className="nav-item">
                 <Link className="nav-link nav-text-color " to="/addservices">
@@ -53,18 +51,75 @@ const Header = () => {
 
             {user.email ? (
               <li className="nav-item">
-                <p className="nav-link m-0">
-                  <span className="fw-bolder mx-2"> {user.displayName} </span>
-                  <button onClick={logOut} className="btn btn-sm btn-danger">
-                    <i className="fas fa-sign-out-alt ms-2"></i>
-                  </button>
-                </p>
+                <div className="nav-link m-0 d-md-flex text-center">
+                  <div class="d-flex mb-2">
+                    <div class="dropdown me-1">
+                      <img
+                        src={user.photoURL}
+                        type="button"
+                        alt=""
+                        class="btn p-0 me-md-5 dropdown-toggle rounded-circle"
+                        style={{ width: "50px", height: "50px" }}
+                        data-bs-toggle="dropdown"
+                        data-bs-display="static"
+                        aria-expanded="false"
+                        id="navbarDarkDropdownMenuLink"
+                        role="button"
+                      />
+
+                      <div
+                        class="dropdown-menu position-absolute  shadow-lg  border-0 rounded-3"
+                        aria-labelledby="dropdownMenuOffset"
+                        style={{
+                          width: "210px",
+                        }}
+                      >
+                        <div className="text-center  ">
+                          <img
+                            src={user.photoURL}
+                            alt=""
+                            srcset=""
+                            class="rounded-circle"
+                          />
+                          <p className="fw-bolder  mt-3">{user.displayName}</p>
+                          <button className="btn btn-success rounded-pill">
+                            View Profile
+                          </button>
+                          <hr />
+
+                          {/* all item list btn */}
+                          <div class="list-group text-start ">
+                            <button
+                              type="button"
+                              class="list-group-item list-group-item-action border-0"
+                              aria-current="true"
+                            >
+                              <i class="fas fa-book"> Student Details</i>
+                            </button>
+                            <button
+                              type="button"
+                              class="list-group-item list-group-item-action border-0"
+                            >
+                              <i class="fas fa-book"> Student Details</i>
+                            </button>
+                            <button
+                              onClick={logOut}
+                              class="list-group-item list-group-item-action border-0"
+                            >
+                              <i className="fas fa-sign-out-alt ">LogOut</i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             ) : (
               <li className="nav-item">
                 <Link className="nav-link" to="/login">
                   <button className="btn btn-sm btn-success">
-                    <i className="fas fa-sign-in-alt ms-2"></i>
+                    <i className="fas fa-sign-in-alt ms-2"> Login</i>
                   </button>
                 </Link>
               </li>

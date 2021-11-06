@@ -4,13 +4,17 @@ const Banner = () => {
   return (
     <div className="container">
       <div className="py-md-5 py-4">
-        <h1 className="fw-bolder fs-h1 animoson-h1-banner">
+        <h1
+          className="fw-bolder fs-h1 animoson-h1-banner"
+          data-aos="fade-right"
+        >
           Welcome to Bangldesh !
         </h1>
         <h4 className="fw-bolder ">
           An unspoled land wehere youll hardly meet another tourist
         </h4>
-        <p className="lh-base">
+        {/* animison data aos */}
+        <p className="lh-base" data-aos="fade-left">
           Bangladesh's tourist attractions include historical monuments,
           resorts, beaches, picnic spots, forests and tribal people, wildlife of
           various species. Activities for tourists include angling, water
