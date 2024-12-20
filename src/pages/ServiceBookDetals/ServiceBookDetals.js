@@ -30,7 +30,7 @@ const ServiceBookDetals = () => {
     if (userOldBookList) {
       alert("This Booking Serviceyou are allready add");
     } else {
-      fetch(`https://salty-cove-54306.herokuapp.com/booktours`, {
+      fetch(`https://dream-api-topaz.vercel.app/booktours`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
